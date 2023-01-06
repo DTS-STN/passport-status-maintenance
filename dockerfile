@@ -21,8 +21,10 @@ LABEL org.opencontainers.image.revision=${BUILD_REVISION}
 LABEL org.opencontainers.image.authors="Digital Technology Solutions"
 LABEL org.opencontainers.image.url="https://github.com/DTS-STN/"
 LABEL org.opencontainers.image.vendor="Employment and Social Development Canada"
-LABEL org.opencontainers.image.title="Passport Status - Maintenance"
+LABEL org.opencontainers.image.title="Passport Status - Maintenance Page"
 LABEL org.opencontainers.image.description="An NGINX application that displays an 'under maintenance' page for all requested URLs."
 
 COPY html/index.html /usr/share/nginx/html/index.html
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80 3000 8080
